@@ -30,7 +30,7 @@ cookiecutter https://github.com/khuyentran1401/data-science-template
 
 ```bash
 .
-├── artifacts                       # supporting document for your project
+├── artifacts                       # Intermediate products
 ├── config
 │   ├── main.yaml                   # Main configuration file
 │   ├── model                       # Configurations for training model
@@ -52,31 +52,31 @@ cookiecutter https://github.com/khuyentran1401/data-science-template
 │   └── docker                      # docker file
 ├── docs                            # documentation for your project
 ├── logs                            # log files
-├── dvc.yaml                        # DVC pipeline
-├── .flake8                         # configuration for flake8 - a Python formatter tool
-├── .gitignore                      # ignore files that cannot commit to Git
+├── dvc.yaml                        # Stages/pipeline - dvc reproduce command will refer to `dvc.yaml` and creates a pipeline. check [dvc.yaml](https://dvc.org/doc/user-guide/project-structure/pipelines-files#pipelines-files-dvcyaml) for more details
+├── .flake8                         # configuration for flake8 - a Python formatter tool -
+├── .gitignore                      # ignore files for git
 ├── Makefile                        # store useful commands to set up the environment
 ├── models                          # store models
 ├── notebooks                       # store notebooks
 │   ├── reference                   # experiment/eda/reference notebooks
 ├── production                      # production related scripts like scroing/monitoring
 ├── reports                         # scripts for monitering health of deployed projects
-├── .pre-commit-config.yaml         # configurations for pre-commit
-├── pyproject.toml                  # dependencies for poetry
+├── .pre-commit-config.yaml         # configurations for pre-commit -- checks code formatting, code style, and code style conventions before committing to Git. See [pre-commit plugins](https://pre-commit.com/).
+├── pyproject.toml                  # dependencies for poetry - see [Poetry](https://towardsdatascience.com/how-to-effortlessly-publish-your-python-package-to-pypi-using-poetry-44b305362f9f)
 ├── README.md                       # describe your project
 ├── src                             # store source code
 │   └── package_name                # in case packaging is needed. replace package_name with actual package name (optional).
 │        ├── __init__.py            # make src a Python module
 │        ├── process.py             # process data before training model
 │        └── train_model.py         # train model
-├── tests                           # store tests
+├── tests                           # store tests for your project
 │   ├── __init__.py                 # make tests a Python module
 │   ├── test_process.py             # test functions for process.py
 │   └── test_train_model.py         # test functions for train_model.py
 ├── LICENCE                         # LICENCE details of the project
 ├── init_setup.sh                   # script to initiate the project
 ├── setup.cfg                       # configuration file for setuptools. much of this configuration may be able to move to pyproject.toml. (optional)
-└── setup.py                        # build script for setuptools. It tells setuptools about your package (such as the name and version) as well as which code files to include (optional).
+└── setup.py                        # build script for setuptools. It tells setuptools about your package (such as the name and version) as well as which code files to include (optional) - converts src as module.
 ```
 
 **Note:** Refer packaging details [here](https://packaging.python.org/en/latest/tutorials/packaging-projects/)

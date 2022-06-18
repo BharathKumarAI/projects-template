@@ -3,6 +3,7 @@
 # Set up the environment
 echo "Setting up the environment"
 echo "running Makefile"
+# Make file contains all the required commands to setup the environment
 make activate
 make setup
 
